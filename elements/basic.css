@@ -51,6 +51,44 @@ body, html {
     background-color: #45a049;
 }
 
+/* Organisation dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 10px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #575757;
+}
+
+/* hover dropdown */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 /* main */
 .hero {
     background-image: url('https://via.placeholder.com/1920x600'); /* todo change */
