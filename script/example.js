@@ -1,1 +1,1 @@
-// todo fill this file
+console.log("Hello, GitHub Pages!");
