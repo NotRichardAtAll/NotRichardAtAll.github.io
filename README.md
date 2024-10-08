@@ -14,17 +14,6 @@ Since this repository is the source code of my personal website, you may want to
 >
 > Our administrators will check and clean up these messages regularly, so your off topic issues may not be visible after a period of time. This is normal.
 
-> [!WARNING]
-> The Issues section is not intended for casual chatting or venting emotions, therefore the following are strictly prohibited in the Issues section:
->
-> - Advertising, spam, or misleading information
-> - Discriminatory (racial discrimination, gender discrimination, etc.)
-> - Privacy violations and Abusive language
-> - Political (political propaganda, canvassing or campaign for votes, etc.)
-
-> [!Caution]
-> If you make prohibited topic in issues too many times, or make comments that are off-topic too many times, your account may be banned from posting issues.
-
 Since you want to stay here, it means you have your own reasons.
 
 I won't force you to leave, but is it because you 
