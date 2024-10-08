@@ -17,13 +17,13 @@ I won't force you to leave, but is it because you
 
 or you simply
 
-### Can't run everything on the website?
+### Can't run some specific stuff on the website?
 
 // todo fill here
 
 or you
 
-### Found a brilliant idea?
+### Got a brilliant idea?
 
 // todo fill this
 
