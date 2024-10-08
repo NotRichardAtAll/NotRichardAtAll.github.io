@@ -1,1 +1,1 @@
-console.log("Hello, GitHub Pages!");
+console.log("JavaScript is working!");
