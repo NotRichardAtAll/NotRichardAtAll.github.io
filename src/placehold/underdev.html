@@ -5,26 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Under Development</title>
     <style>
-        /* Basic Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Full-page dark gray background */
         body {
-            background-color: #333; /* Dark gray */
-            color: white; /* White text */
+            background-color: #333;
+            color: white;
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             text-align: center;
+            flex-direction: column;
         }
 
-        /* Centered title */
         .container {
             max-width: 600px;
             padding: 20px;
@@ -39,13 +37,52 @@
             font-size: 1.5em;
             margin-top: 10px;
         }
+
+        .admin-link {
+            margin-top: 20px;
+            color: lightgray;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .admin-link:hover {
+            color: white;
+        }
+
+        .password-box {
+            display: none;
+            margin-top: 10px;
+        }
+
+        input[type="password"] {
+            padding: 5px;
+            margin-right: 10px;
+            border-radius: 3px;
+            border: none;
+        }
+
+        input[type="submit"] {
+            padding: 5px 10px;
+            border-radius: 3px;
+            border: none;
+            background-color: #555;
+            color: white;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Site Under Development</h1>
         <p>We are currently working on something great. Stay tuned!</p>
-        <p id="time"></p> <!-- Placeholder for current time -->
+        <p id="time"></p>
+
+        <!-- Admin link to reveal password prompt -->
+        <p class="admin-link" onclick="showPasswordBox()">Developer's Page</p>
+        <div class="password-box" id="password-box">
+            <input type="password" id="password" placeholder="Enter password" />
+            <input type="submit" value="Submit" onclick="checkPassword()" />
+        </div>
     </div>
 
     <script>
@@ -55,14 +92,29 @@
                 hour: 'numeric',
                 minute: 'numeric',
                 second: 'numeric',
-                hour12: true
+                hour12: false
             });
             document.getElementById('time').innerText = `Current time: ${formattedTime}`;
         }
 
-        // Update time on page load and every second
+        // Update time every second
         updateTime();
         setInterval(updateTime, 1000);
+
+        // Show password input box
+        function showPasswordBox() {
+            document.getElementById('password-box').style.display = 'block';
+        }
+
+        // Check the entered password and redirect if correct
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            if (password === 'admin') {
+                window.location.href = '../dev/dev.html';
+            } else {
+                alert('Incorrect password!');
+            }
+        }
     </script>
 </body>
 </html>
