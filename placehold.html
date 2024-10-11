@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Development</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full-page dark gray background */
+        body {
+            background-color: #333; /* Dark gray */
+            color: white; /* White text */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* Centered title */
+        .container {
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        #time {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Site Under Development</h1>
+        <p>We are currently working on something great. Stay tuned!</p>
+        <p id="time"></p> <!-- Placeholder for current time -->
+    </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const formattedTime = now.toLocaleString('en-US', {
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric',
+                hour12: true
+            });
+            document.getElementById('time').innerText = `Current time: ${formattedTime}`;
+        }
+
+        // Update time on page load and every second
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
