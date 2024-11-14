@@ -1,0 +1,13 @@
+.scroll-text {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    animation: scrollText 3s linear infinite;
+}
+
+@keyframes scrollText {
+    0% { transform: translateY(0); }
+    33% { transform: translateY(-100%); }
+    66% { transform: translateY(-200%); }
+    100% { transform: translateY(0); }
+}
