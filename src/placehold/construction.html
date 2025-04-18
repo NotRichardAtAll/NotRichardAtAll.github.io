@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Construction Site</title>
+  <link rel="stylesheet" href="../../assets/css/components/button.css">
+  <link rel="stylesheet" href="../../assets/css/readme-box.css">
+  <link rel="stylesheet" href="../../assets/css/pages/construction.css">
+  <script defer src="../../assets/script/theme.js"></script>
+  <script defer src="../../assets/script/pages/construction.js"></script>
+</head>
+<body>
+  <div class="construction-wrapper">
+    <img src="../../assets/images/irasutoya/mokuzai_hakobu.png" alt="Under Construction" class="construction-img">
+    <h1 class="title">Construction Site</h1>
+    <h2 class="subtitle">This page is currently under maintenance. Come back soon!</h2>
+
+    <div class="timezone">Your current time: <span id="local-time"></span> (UTC<span id="utc-offset"></span>)</div>
+
+    <div class="button-group">
+      <button class="btn btn-primary" onclick="location.href='/'">🏠 Home</button>
+      <button class="btn btn-secondary" onclick="history.back()">↩️ Back</button>
+    </div>
+
+    <div class="token-toggle" onclick="toggleTokenInput()">or enter token</div>
+
+    <div id="token-section" class="token-section hidden">
+      <input type="text" id="token-input" placeholder="Enter token..." />
+      <button onclick="fetchReadme()">🔍 Show README</button>
+    </div>
+
+    <div id="readme-box" class="readme-box hidden"></div>
+  </div>
+</body>
+</html>

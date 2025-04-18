@@ -1,76 +1,60 @@
-/* 基础样式 */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-
-/* 欢迎页面样式 */
-.welcome-section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #3a6186, #89253e);
-    color: white;
-    text-align: center;
-    position: relative;
-}
-
-h1 {
-    font-size: 3rem;
-    margin: 0;
-}
-
-.scroll-text {
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    font-weight: bold;
-    animation: scrollText 6s linear infinite;
-}
-
-/* 滚动文字动画 */
-@keyframes scrollText {
-    0% { transform: translateY(0); }
-    33% { transform: translateY(-100%); }
-    66% { transform: translateY(-200%); }
-    100% { transform: translateY(0); }
-}
-
-/* 导航栏样式 */
-.navbar {
-    width: 100%;
-    padding: 1rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    display: flex;
-    justify-content: center;
-    transform: translateY(-100%);
-    transition: transform 0.3s ease;
-}
-
-.navbar.show {
-    transform: translateY(0);
-}
-
-.navbar a {
-    color: white;
-    margin: 0 1rem;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* 内容区 */
-.content {
-    height: 200vh; /* 为了演示滚动效果，增加页面高度 */
-    background: #f4f4f4;
-    text-align: center;
-    padding-top: 2rem;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Redirecting to Construction</title>
+  <meta http-equiv="refresh" content="3; url=./src/placehold/construction.html" />
+  <link rel="stylesheet" href="./assets/elements/basic.css">
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+    .redirect-box {
+      text-align: center;
+      padding: 2rem;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .redirect-box h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .redirect-box p {
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      padding: 0.5rem 1.2rem;
+      border: none;
+      background-color: #007acc;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.2s ease;
+    }
+    .btn:hover {
+      background-color: #005a99;
+    }
+  </style>
+</head>
+<body>
+  <div class="redirect-box">
+    <h1>🚧 Under construction...</h1>
+    <p>Going to Construction Page (jump in 3 sec)</p>
+    <a href="./src/placehold/construction.html">
+      <button class="btn">jump by manual</button>
+    </a>
+  </div>
+</body>
+</html>
