@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Under Development">
+  <section style="min-height: 70vh; display:flex; align-items:center; justify-content:center; flex-direction:column; text-align:center; padding: 2rem;">
+    <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Site Under Development</h1>
+    <p style="opacity: 0.9;">We are currently working on something great. Stay tuned!</p>
+    <p id="time" style="margin-top: 1rem; font-size: 1.2rem;"></p>
+  </section>
+
+  <script is:inline>
+    function updateTime() {
+      const now = new Date();
+      const formattedTime = now.toLocaleString('en-GB', {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+      });
+      document.getElementById('time').innerText = `Current time: ${formattedTime}`;
+    }
+    updateTime();
+    setInterval(updateTime, 1000);
+  </script>
+</BaseLayout>
